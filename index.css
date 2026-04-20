@@ -1,1 +1,29 @@
+body {
+    background-color: #3b385c;
+    color: #ffffff;
+}
 
+#appTitle {
+    text-align: center;
+    margin: 0px auto;
+    display: block;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 80px;
+}
+
+#categoryForm, #submit {
+    text-align: center;
+    margin: 0px auto;
+    display: block;
+    font-family: 'Fredoka One', sans-serif;
+}
+
+#activityInfo {
+    width:  65%;
+    margin:  32px auto;
+}
+
+select {
+    width: 200px;
+    height: auto;
+}
