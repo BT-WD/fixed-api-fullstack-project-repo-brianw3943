@@ -1,29 +1,130 @@
 body {
-    background-color: #3b385c;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background: linear-gradient(180deg, #3b385c 0%, #201c35 100%);
     color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    width: 100%;
+    padding: 24px 16px 0;
+    text-align: center;
 }
 
 #appTitle {
-    text-align: center;
-    margin: 0px auto;
-    display: block;
+    margin: 0;
     font-family: 'Staatliches', sans-serif;
-    font-size: 80px;
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    letter-spacing: 0.04em;
 }
 
-#categoryForm, #submit {
-    text-align: center;
-    margin: 0px auto;
-    display: block;
-    font-family: 'Fredoka One', sans-serif;
+#categoryForm {
+    width: min(100%, 420px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 16px 0;
 }
 
-#activityInfo {
-    width:  65%;
-    margin:  32px auto;
+#categoryForm label {
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+}
+
+select,
+button {
+    width: 100%;
+    max-width: 320px;
 }
 
 select {
-    width: 200px;
-    height: auto;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.08);
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+button {
+    padding: 14px 20px;
+    background: #7e79c6;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover,
+button:focus-visible {
+    background: #9a95d7;
+    transform: translateY(-1px);
+}
+
+#activityInfo {
+    width: min(100%, 720px);
+    margin: 24px auto 40px;
+    padding: 28px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 28px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.22);
+    backdrop-filter: blur(10px);
+}
+
+#activityInfo div {
+    margin-bottom: 16px;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+#activityInfo div:last-child {
+    margin-bottom: 0;
+}
+
+#activity {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+#availability,
+#type,
+#participants,
+#price,
+#accessibility,
+#duration,
+#kidFriendly,
+#link,
+#key {
+    opacity: 0.95;
+}
+
+a {
+    color: #ffd36c;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 520px) {
+    #activityInfo {
+        padding: 20px;
+    }
+
+    button,
+    select {
+        max-width: 100%;
+    }
 }

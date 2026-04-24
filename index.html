@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>API Full Stack Project</title>
+    <link rel="stylesheet" href="index.css" />
+    <script defer src="index.js"></script>
   </head>
   <body>
     <header>
-      <h1 id = "appTitle">Activity Generator</h1>
+      <h1 id="appTitle">Activity Generator</h1>
     </header>
     <form id="categoryForm">
       <label for="category">Choose a category:</label>
@@ -21,8 +23,7 @@
         <option value="relaxation">Relaxation</option>
         <option value="busywork">Busywork</option>
       </select>
-      <button type="submit">Generate Activity</button>
-      
+      <button type="submit" id="submitBtn">Generate Activity</button>
     </form>
     <div id="activityInfo">
       <div id="activity"></div>
